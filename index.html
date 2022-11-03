@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap"  rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dankus Memus</title>
+  </head>
+  <body>
+    <div id="background-image">
+      <img id="background-image" src="/assets/background.png" />
+    </div>
+    <h1>Dankus Memus</h1>
+    <div>Generate your cringey memes.</div>
+    <div class="inputs-preview-box">
+      <div id="form">
+        <!--<div class="color-picker"><label for="color">Text color:</label><input type="color" id="color"></div> !-->
+        <form>
+          <div class="form-items">
+            <label for="image-url">Image URL:</label
+            ><input class="input" type="url" id="image-url" />
+          </div>
+          <div class="form-items">
+            <label for="top-text">Top text:</label
+            ><input class="input" type="text" id="top-text" />
+          </div>
+          <div class="form-items">
+            <label for="bottom-text">Bottom text:</label
+            ><input class="input" type="text" id="bottom-text" />
+          </div>
+          <div class="button">
+            <button id="submit-button" type="submit">Cringe</button>
+          </div>
+        </form>
+      </div>
+      <div class="preview-box">
+        <div class="preview-image">
+          <img
+            alt="preview"
+            onerror="this.onerror=null; this.src='/assets/preview.png'"
+            class="preview-image-actual"
+            src="/assets/preview.png"
+          />
+          <div class="preview-upper-text"></div>
+          <div class="preview-lower-text"></div>
+        </div>
+      </div>
+    </div>
+    <div id="memes"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>

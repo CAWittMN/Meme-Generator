@@ -1,0 +1,176 @@
+body {
+  background-color: rgb(40, 39, 38);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Slab', serif;
+}
+#background-image {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  filter: opacity(50%);
+}
+form {
+  max-width: 600px;
+  position: relative;
+  border: solid 5px rgb(84, 207, 105);
+  border-radius: 30px;
+  justify-content: center;
+}
+.form-items {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  margin: 10px auto;
+}
+.input {
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.628);
+  border: none;
+}
+#submit-button {
+  font-family: 'Roboto Slab';
+  font-size: 1.4em;
+  position: absolute;
+  right: 0;
+  border: none;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100px;
+  height: 40px;
+  margin-right: 10%;
+  margin-bottom: 10px;
+  background-color: rgb(84, 207, 105);
+  transition: all 200ms;
+}
+#submit-button:hover {
+    height: 48px;
+    color: white;
+}
+.inputs-preview-box {
+  display: flex;
+}
+.preview-box {
+  border: solid 3px gray;
+  width: 150px;
+  height: 150px;
+  border-radius: 7px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  background-color: rgb(130, 130, 130, 50%);
+}
+.preview-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 150px;
+  max-height: 150px;
+}
+.preview-image-actual {
+max-height: 300px;
+max-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+.preview-upper-text,
+.top-text {
+  position: absolute;
+  top: 0;
+}
+.preview-lower-text,
+.bottom-text {
+  position: absolute;
+  bottom: 0;
+}
+.preview-upper-text,
+.preview-lower-text,
+.bottom-text,
+.top-text {
+  user-select: none;
+}
+.preview-lower-text,
+.preview-upper-text {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  text-align: center;
+  max-width: 150px;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, 0px -1px 0 #000,
+    -1px 0px 0 #000, 1px 1px 3px #000;
+}
+#memes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+}
+.meme-image {
+    max-height: 300px;
+  width: 100%;
+  height: 100%;
+}
+.meme {
+  border: dotted 2px rgba(0, 128, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  transition: all 1000ms;
+}
+.meme-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-height: 300px;
+  max-width: 300px;
+}
+.top-text,
+.bottom-text {
+  font-size: 2em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  text-align: center;
+  max-width: 300px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000,
+    -2px 0px 0 #000, 2px 2px 5px #000;
+}
+.delete-button {
+  margin: 15px;
+  opacity: 50%;
+  transform: rotateX(90deg);
+  border: none;
+  border-radius: 10px;
+  font-weight: bolder;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 200ms;
+}
+.meme:hover .delete-button {
+  transform: rotateX(0deg);
+}
+.meme:hover {
+  border: dotted 2px green;
+}
+.delete-button:hover {
+  opacity: 100%;
+  background-color: red;
+}
+.deleting {
+    filter: blur(2rem);
+    opacity: 0%;
+}
