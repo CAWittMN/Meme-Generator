@@ -4,7 +4,7 @@ const bottomText = document.querySelector("#bottom-text");
 const memeImage = document.querySelector("#image-url");
 const previewTopText = document.querySelector(".preview-upper-text");
 const previewBottomText = document.querySelector(".preview-lower-text");
-const previewImage = document.querySelector(".preview-image-acual");
+const previewImage = document.querySelector(".preview-image-actual");
 
 document.querySelector("form").addEventListener("submit", function (submit) {
   submit.preventDefault();
@@ -59,6 +59,9 @@ function createMeme() {
   memeContainer.append(newMeme);
 
   document.querySelector("form").reset();
+  previewBottomText.innerHTML = bottomText.value;
+  previewTopText.innerHTML = topText.value;
+  previewImage.setAttribute("src", "/assets/preview.png");
 }
 
 function deleteMeme(targetMeme) {
